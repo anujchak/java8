@@ -1,4 +1,5 @@
 import java.sql.SQLOutput;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -14,6 +15,7 @@ public class Main {
                 new employee(4,"ram","dev",10),
                 new employee(5,"sam","HR",50)
         );
-        System.out.println(l.stream().map(employee::getName).collect(Collectors.toList()));
+        //System.out.println(l.stream().map(employee::getName).collect(Collectors.toList()));
+        System.out.println(l.stream().collect(Collectors.maxBy(Comparator.comparing(employee::getSalary))).get().getName());
     }
 }
