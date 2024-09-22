@@ -16,6 +16,7 @@ public class Main {
                 new employee(5,"sam","HR",50)
         );
         //System.out.println(l.stream().map(employee::getName).collect(Collectors.toList()));
-        System.out.println(l.stream().collect(Collectors.maxBy(Comparator.comparing(employee::getSalary))).get().getName());
+        //System.out.println(l.stream().collect(Collectors.maxBy(Comparator.comparing(employee::getSalary))).get().getName());
+
     }
 }
