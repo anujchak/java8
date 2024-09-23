@@ -1,8 +1,23 @@
+import java.util.Objects;
+
 public class employee {
     int roll;
     String name;
     String department;
     int salary;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        employee employee = (employee) o;
+        return roll == employee.roll;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(roll);
+    }
 
     public int getRoll() {
         return roll;
