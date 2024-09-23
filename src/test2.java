@@ -29,7 +29,7 @@ public class test2 {
         //System.out.println(m.entrySet().stream().filter(e->e.getValue()>1).map(e->e.getKey()).collect(Collectors.toList()));
         //reverase a array
         int arr3[]={4,3,2,1};
-        System.out.println(Arrays.toString(arr3));
+        //System.out.println(Arrays.toString(arr3));
         IntStream.range(0,arr3.length/2).forEach(e->
                 {
                    int temp = arr3[e];
@@ -39,7 +39,9 @@ public class test2 {
                 );
 
 
-        System.out.println( Arrays.toString(arr3));
+        //System.out.println( Arrays.toString(arr3));
+        String arr4[]={"apple","ball","cat","kkuf"};
+        System.out.println(Arrays.stream(arr4).mapToInt(String::length).average().orElse(0));
 
     }
 }
